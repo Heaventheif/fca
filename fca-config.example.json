@@ -1,0 +1,27 @@
+{
+  "_comment_credentials": "Do NOT put email/password here. Use env vars instead: FCA_EMAIL, FCA_PASSWORD, FCA_2FA",
+  "autoLogin": false,
+  "loginTimeoutMs": 20000,
+  "processErrorHandlers": false,
+  "apiServer": "",
+  "apiKey": "",
+  "checkUpdate": {
+    "enabled": false,
+    "install": false,
+    "allowInstall": false,
+    "notifyIfCurrent": false,
+    "packageName": "fca-unofficial",
+    "registryUrl": "https://registry.npmjs.org",
+    "timeoutMs": 10000
+  },
+  "mqtt": {
+    "enabled": true,
+    "reconnectInterval": 3600
+  },
+  "remoteControl": {
+    "enabled": false,
+    "url": "",
+    "token": "",
+    "autoReconnect": true
+  }
+}

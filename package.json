@@ -1,0 +1,63 @@
+{
+  "name": "fca-unofficial",
+  "version": "5.2.0-esm+patched",
+  "description": "Unofficial Facebook Chat API \u2014 clean domain-driven architecture. Pure ESM, no CJS. Security patches: FCA-01 (HTTP proxy), FCA-02 (silent data loss), FCA-04 (per-file salt), FCA-05 (scrypt cache), FCA-06 (server-side Postgres WHERE), FCA-08 (explicit GCM authTag), FCA-10 (deobfuscated).",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./lib/*": "./lib/*"
+  },
+  "files": [
+    "lib/",
+    "fca-config.example.json",
+    "README.md",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "LICENSE",
+    "test.js",
+    "test-fixes.js",
+    "import-smoke.js"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "node test.js && node import-smoke.js",
+    "test:fixes": "node test-fixes.js",
+    "test:full": "node test-full.js",
+    "test:all": "node test.js && node import-smoke.js && node test-fixes.js",
+    "lint": "node --input-type=module --eval \"import(\"./lib/index.js\")\" && echo lint ok",
+    "prepublishOnly": "npm run test:all"
+  },
+  "engines": {
+    "node": ">=20.10.0",
+    "bun": ">=1.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-progress": "^3.12.0",
+    "duplexify": "^4.1.3",
+    "form-data": "^4.0.0",
+    "gradient-string": "^3.0.0",
+    "https-proxy-agent": "^7.0.6",
+    "mqtt": "^4.3.8",
+    "ora": "^9.3.0",
+    "picocolors": "^1.1.1",
+    "postgres": "^3.4.7",
+    "socks-proxy-agent": "^8.0.4",
+    "tough-cookie": "^6.0.1",
+    "ws": "^8.21.0"
+  },
+  "keywords": [
+    "facebook",
+    "messenger",
+    "chat",
+    "api",
+    "bot",
+    "fca",
+    "mqtt",
+    "appstate"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}
