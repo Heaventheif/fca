@@ -1,0 +1,61 @@
+{
+  "name": "fca-unofficial",
+  "version": "1.0.0",
+  "description": "unofficial Facebook api experiment for The ethical trolling of the bug is in Meta's favor.",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./lib/*": "./lib/*"
+  },
+  "files": [
+    "README.md"],
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "bun": ">=1.0.0"
+  },
+  "dependencies": {
+    "duplexify": "^4.1.3",
+    "form-data": "^4.0.0",
+    "https-proxy-agent": "^7.0.6",
+    "mqtt": "^4.3.8",
+    "postgres": "^3.4.7",
+    "socks-proxy-agent": "^8.0.4",
+    "tough-cookie": "^6.0.1",
+    "ws": "^8.21.0",
+    "@signalapp/libsignal-client": "^0.56.0",
+    "protobufjs": "^7.4.0",
+    "@noble/curves": "^1.6.0",
+    "@noble/hashes": "^1.5.0"
+  },
+  "keywords": [
+    "facebook",
+    "messenger",
+    "chat",
+    "api",
+    "bot",
+    "fca",
+    "mqtt",
+    "appstate",
+    "anti-ban",
+    "stealth",
+    "e2ee",
+    "fingerprint",
+    "webhook",
+    "broadcast",
+    "plugin",
+    "circuit-breaker",
+    "rate-limit",
+    "watchdog"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  },
+  "optionalDependencies": {
+    "mime": "^3.0.0"
+  },
+  "scripts": {
+    "install:e2ee": "npm install @signalapp/libsignal-client protobufjs @noble/curves @noble/hashes"
+  }
+}
